@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>Todoリスト</h1>
+    <todo-link />
     <todo-form @handleParentAddTodo="handleParentAddTodo" />
     <todo-list :todos="todos"
       @handleParentDeleteTodo="handleParentDeleteTodo"
@@ -11,12 +12,14 @@
 <script>
 import TodoForm from '@/components/TodoForm';
 import TodoList from '@/components/TodoList';
+import TodoLink from '@/components/TodoLink';
 
 export default {
   name: 'Todo',
   components: {
     TodoForm,
     TodoList,
+    TodoLink,
   },
   data() {
     return {
